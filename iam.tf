@@ -31,7 +31,7 @@ data "aws_iam_policy_document" "ec2_trust_policy" {
   }
 }
 
-resource "aws_iam_role" "this_role" {
+resource "aws_iam_role_policy_attachment" "this_role" {
   name = "cmtr-6pajwelx-iam-role"
 
   managed_policy_arns = [aws_iam_policy.this_policy.arn]
